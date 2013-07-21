@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget44"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <Button
+        android:id="@+id/button_send_to_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="91dp"
+        android:layout_y="323dp"
+        android:text="Beam to your phone!" />
+
+    <EditText
+        android:id="@+id/textView_result"
+        android:layout_width="238dp"
+        android:layout_height="225dp"
+        android:layout_x="47dp"
+        android:layout_y="74dp"
+        android:textSize="18sp" />
+
+<!--     <TextView
+        android:id="@+id/emailPrint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="20px"
+        android:text="Here is the text that we found!:" /> -->
+
+</AbsoluteLayout>
