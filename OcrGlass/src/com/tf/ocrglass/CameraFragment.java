@@ -8,17 +8,16 @@ import android.content.pm.ActivityInfo;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
-import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
-import android.widget.Button;
+
 
 public class CameraFragment extends Fragment implements SurfaceHolder.Callback,
-		Camera.PictureCallback, View.OnClickListener {
+		Camera.PictureCallback, View.OnClickListener{
 
 	public interface OnTakePictureListener {
 
@@ -26,14 +25,15 @@ public class CameraFragment extends Fragment implements SurfaceHolder.Callback,
 	}
 
 	private Camera camera;
-
+	private GestureDetector mGestureDetector;
 	private static final String TAG = "CameraFragment";
 
-	CameraFragment.OnTakePictureListener listener;
+	OnTakePictureListener listener;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		Log.d(TAG, "onCreate");
+		mGestureDetector = new GestureDetector(new GlassDPadController(this));
 		super.onCreate(savedInstanceState);
 
 	}
@@ -50,9 +50,9 @@ public class CameraFragment extends Fragment implements SurfaceHolder.Callback,
 		super.onAttach(activity);
 		Log.d(TAG, "onAttach");
 		// sets orientation
-		activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		//activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		try {
-			listener = (CameraFragment.OnTakePictureListener) activity;
+			listener = (OnTakePictureListener) activity;
 		} catch (ClassCastException cce) {
 			throw new ClassCastException(activity.toString()
 					+ " must implement DatePickerDialog.OnDateSetListener");
@@ -130,6 +130,13 @@ public class CameraFragment extends Fragment implements SurfaceHolder.Callback,
 		camera.setParameters(parameters);
 	}
 
+	
+	public void onTap() {
+		Log.d(TAG, "onClick");
+		camera.takePicture(null, null, this);
+
+	}
+	
 	@Override
 	public void onClick(View v) {
 		Log.d(TAG, "onClick");

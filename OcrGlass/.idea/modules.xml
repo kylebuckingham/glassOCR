@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/OcrGlass.iml" filepath="$PROJECT_DIR$/OcrGlass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tess-two-master/tess-two-master/tess-two/jni/com_googlecode_tesseract_android/src/com_googlecode_tesseract_android.iml" filepath="$PROJECT_DIR$/tess-two-master/tess-two-master/tess-two/jni/com_googlecode_tesseract_android/src/com_googlecode_tesseract_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tess-two-master/tess-two-master/eyes-two/eyes-two.iml" filepath="$PROJECT_DIR$/tess-two-master/tess-two-master/eyes-two/eyes-two.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tess-two-master/tess-two-master/tess-two/tess-two.iml" filepath="$PROJECT_DIR$/tess-two-master/tess-two-master/tess-two/tess-two.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tess-two-master/tess-two-master/tess-two-test/tess-two-test.iml" filepath="$PROJECT_DIR$/tess-two-master/tess-two-master/tess-two-test/tess-two-test.iml" />
+    </modules>
+  </component>
+</project>
+
