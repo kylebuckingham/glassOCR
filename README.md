@@ -1,7 +1,7 @@
 glassOCR
 ========
 
-A simple text analyzer for Google glass.
+A simple text analyzer for Google glass. This is currently not functioning, and only here for collaboration purposes.
 
 Install instructions:
 
